@@ -1,8 +1,5 @@
+// src/controllers/category.controller.js
 import Category from "../models/Category.js";
-
-/**
- * CRUD simple para categorías
- */
 
 export const listCategories = async (req, res) => {
     try {
@@ -16,11 +13,8 @@ export const listCategories = async (req, res) => {
 export const createCategory = async (req, res) => {
     try {
         const { name, description } = req.body;
-        if (!name) return res.status(400).json({ msg: "Name required" });
-        const exists = await Category.findOne({ name });
-        if (exists) return res.status(400).json({ msg: "Category already exists" });
-        const cat = await Category.create({ name, description });
-        res.json(cat);
+        const c = await Category.create({ name, description });
+        res.status(201).json(c);
     } catch (err) {
         res.status(500).json({ msg: err.message });
     }
@@ -28,14 +22,10 @@ export const createCategory = async (req, res) => {
 
 export const updateCategory = async (req, res) => {
     try {
-        const { id } = req.params;
         const { name, description } = req.body;
-        const cat = await Category.findById(id);
-        if (!cat) return res.status(404).json({ msg: "Category not found" });
-        if (name) cat.name = name;
-        if (description) cat.description = description;
-        await cat.save();
-        res.json(cat);
+        const c = await Category.findByIdAndUpdate(req.params.id, { name, description }, { new: true });
+        if (!c) return res.status(404).json({ msg: "Not found" });
+        res.json(c);
     } catch (err) {
         res.status(500).json({ msg: err.message });
     }
@@ -43,8 +33,8 @@ export const updateCategory = async (req, res) => {
 
 export const deleteCategory = async (req, res) => {
     try {
-        const { id } = req.params;
-        await Category.findByIdAndDelete(id);
+        const d = await Category.findByIdAndDelete(req.params.id);
+        if (!d) return res.status(404).json({ msg: "Not found" });
         res.json({ ok: true });
     } catch (err) {
         res.status(500).json({ msg: err.message });

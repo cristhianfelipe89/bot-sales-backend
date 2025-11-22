@@ -1,22 +1,22 @@
+// src/models/Sale.js
 import mongoose from "mongoose";
 
-const SaleItemSchema = new mongoose.Schema({
-    productId: { type: mongoose.Schema.Types.ObjectId, ref: "Product", required: true },
-    quantity: { type: Number, required: true },
-    price: { type: Number, required: true }
+const saleItemSchema = new mongoose.Schema({
+    productId: { type: mongoose.Schema.Types.ObjectId, ref: "Product" },
+    quantity: Number,
+    price: Number
 });
 
 const saleSchema = new mongoose.Schema({
-    userId: { type: String, required: true }, // telegram id or internal id
-    items: [SaleItemSchema],
+    userId: { type: String, required: true },
+    items: [saleItemSchema],
     total: { type: Number, required: true },
     payment: {
-        method: { type: String },
+        method: String,
         status: { type: String, enum: ["pending", "paid", "failed"], default: "paid" },
         metadata: { type: Object }
     },
-    conversationId: { type: mongoose.Schema.Types.ObjectId, ref: "Conversation" },
-    createdAt: { type: Date, default: Date.now }
-});
+    conversationId: { type: mongoose.Schema.Types.ObjectId, ref: "Conversation" }
+}, { timestamps: true });
 
 export default mongoose.model("Sale", saleSchema);
