@@ -19,7 +19,7 @@ jobs:
         username: ubuntu
         key: ${{ secrets.EC2_SSH_KEY }}
         source: "."
-        target: "/home/ubuntu/backend"
+        target: "/home/ubuntu/bot-sales-backend"
 
     - name: Install dependencies and restart backend
       uses: appleboy/ssh-action@v1.0.0
@@ -28,7 +28,7 @@ jobs:
         username: ubuntu
         key: ${{ secrets.EC2_SSH_KEY }}
         script: |
-          cd /home/ubuntu/backend
+          cd /home/ubuntu/bot-sales-backend
           npm install --production
-          pm2 restart backend || pm2 start server.js --name backend
+          pm2 restart bot-sales-backend || pm2 start server.js --name bot-sales-backend
           pm2 save
