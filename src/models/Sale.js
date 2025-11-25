@@ -7,7 +7,7 @@ const saleItemSchema = new mongoose.Schema({
 });
 
 const saleSchema = new mongoose.Schema({
-    // CAMBIO: Ahora es una referencia real al usuario
+    // RELACIÓN DEFINITIVA: ObjectId ref User
     userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
     items: [saleItemSchema],
     total: { type: Number, required: true },

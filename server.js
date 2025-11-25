@@ -8,6 +8,10 @@ import rateLimit from "express-rate-limit";
 import connectDB from "./src/config/db.js";
 
 dotenv.config();
+
+// 2. Configurar la Zona Horaria (Fallback a Bogotá si no está en el .env)
+process.env.TZ = process.env.TZ || 'America/Bogota';
+
 await connectDB();
 
 import authRoutes from "./src/routes/auth.routes.js";

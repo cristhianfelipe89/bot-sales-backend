@@ -50,7 +50,12 @@ export const createSale = async (req, res) => {
 
 export const getSales = async (req, res) => {
     try {
-        const sales = await Sale.find().sort({ createdAt: -1 }).populate("items.productId");
+        // POPULATE USER: Clave para que el dashboard muestre nombres reales
+        const sales = await Sale.find()
+            .sort({ createdAt: -1 })
+            .populate("items.productId")
+            .populate("userId", "name email telegramId");
+            
         res.json(sales);
     } catch (err) {
         res.status(500).json({ msg: err.message });

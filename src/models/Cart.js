@@ -1,4 +1,3 @@
-// src/models/Cart.js
 import mongoose from "mongoose";
 
 const itemSchema = new mongoose.Schema({
@@ -7,7 +6,8 @@ const itemSchema = new mongoose.Schema({
 });
 
 const cartSchema = new mongoose.Schema({
-    userId: { type: String, required: true, index: true },
+    // RELACIÓN DEFINITIVA: ObjectId ref User
+    userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true, index: true },
     items: [itemSchema],
     updatedAt: { type: Date, default: Date.now }
 });
