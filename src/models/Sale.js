@@ -1,4 +1,3 @@
-// src/models/Sale.js
 import mongoose from "mongoose";
 
 const saleItemSchema = new mongoose.Schema({
@@ -8,7 +7,8 @@ const saleItemSchema = new mongoose.Schema({
 });
 
 const saleSchema = new mongoose.Schema({
-    userId: { type: String, required: true },
+    // CAMBIO: Ahora es una referencia real al usuario
+    userId: { type: mongoose.Schema.Types.ObjectId, ref: "User", required: true },
     items: [saleItemSchema],
     total: { type: Number, required: true },
     payment: {

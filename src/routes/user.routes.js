@@ -9,7 +9,8 @@ import {
     deleteUser,
     getUserStats,
     getUserProfile,
-    getUserSales
+    getUserSales,
+    getUserLogs
 } from "../controllers/user.controller.js";
 import { authMiddleware } from "../middleware/authMiddleware.js";
 import { adminOnly } from "../middleware/roleMiddleware.js";
@@ -29,6 +30,9 @@ router.get("/:id/profile", authMiddleware, async (req, res, next) => {
     if (req.user.role === "admin" || req.user._id.toString() === req.params.id) return next();
     return res.status(403).json({ msg: "Forbidden" });
 }, getUserProfile);
+
+// NUEVA RUTA para logs
+router.get("/:id/logs", authMiddleware, adminOnly, getUserLogs);
 
 // user sales (admin or same user)
 router.get("/:id/sales", authMiddleware, async (req, res, next) => {

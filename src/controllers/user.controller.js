@@ -1,7 +1,9 @@
 // src/controllers/user.controller.js
 import User from "../models/User.js";
 import Sale from "../models/Sale.js";
+import UserLog from "../models/UserLog.js";
 import mongoose from "mongoose";
+
 
 /**
  * List users (admin)
@@ -106,6 +108,24 @@ export const deleteUser = async (req, res) => {
         res.status(500).json({ msg: err.message });
     }
 };
+
+/**
+ * NUEVA FUNCIÓN: Obtener logs de un usuario específico
+ */
+export const getUserLogs = async (req, res) => {
+    try {
+        const { id } = req.params;
+        // Traer los últimos 50 logs del usuario
+        const logs = await UserLog.find({ userId: id })
+            .sort({ createdAt: -1 })
+            .limit(50);
+        
+        res.json(logs);
+    } catch (err) {
+        res.status(500).json({ msg: err.message });
+    }
+};
+
 
 /**
  * GET /users/stats
