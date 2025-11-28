@@ -135,3 +135,36 @@ export const telegramAuth = async (req, res) => {
         res.status(500).json({ msg: err.message });
     }
 };
+
+
+export const estadoUsuario = async (req, res) => {
+    try {
+        const { telegramId } = req.query;
+
+        if (!telegramId)
+            return res.status(400).json({ msg: "telegramId requerido" });
+
+        const user = await User.findOne({ telegramId });
+
+        if (!user) {
+            return res.json({
+                telegramId,
+                autenticado: false,
+                registrado: false
+            });
+        }
+
+        return res.json({
+            telegramId,
+            autenticado: true,
+            registrado: true,
+            userId: user._id,
+            usuario: user.name,
+            role: user.role,
+            status: user.status
+        });
+
+    } catch (err) {
+        res.status(500).json({ msg: err.message });
+    }
+};
