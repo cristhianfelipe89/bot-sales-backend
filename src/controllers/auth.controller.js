@@ -313,3 +313,44 @@ export const verificarSesionPorTelegram = async (req, res) => {
         res.status(500).json({ msg: err.message });
     }
 };
+
+
+export const logoutTelegram = async (req, res) => {
+    try {
+        const { telegramId } = req.query;
+
+        if (!telegramId)
+            return res.status(400).json({ msg: "telegramId requerido" });
+
+        // Buscar la sesión existente
+        const session = await Session.findOne({ telegramId });
+
+        if (!session) {
+            return res.json({
+                telegramId,
+                sesionVigente: false,
+                msg: "No existía sesión activa"
+            });
+        }
+
+        // Eliminar la sesión
+        await Session.deleteOne({ telegramId });
+
+        // Crear un LOG opcional
+        await UserLog.create({
+            userId: session.userId,
+            action: "LOGOUT",
+            source: "telegram",
+            details: "Logout desde N8N"
+        });
+
+        return res.json({
+            telegramId,
+            sesionVigente: false,
+            msg: "Sesión cerrada correctamente"
+        });
+
+    } catch (err) {
+        res.status(500).json({ msg: err.message });
+    }
+};
