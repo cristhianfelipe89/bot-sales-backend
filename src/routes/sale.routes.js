@@ -5,7 +5,8 @@ import { authMiddleware } from "../middleware/authMiddleware.js";
 import { adminOnly } from "../middleware/roleMiddleware.js";
 const router = express.Router();
 
-router.post("/", createSale); // called by bot/n8n (protect with x-api-secret at router-level if desired)
+// CAMBIO: ahora el endpoint tiene nombre explícito
+router.post("/ventas", createSale); 
 router.get("/", authMiddleware, adminOnly, getSales);
 router.get("/metrics", authMiddleware, adminOnly, getMetrics);
 
