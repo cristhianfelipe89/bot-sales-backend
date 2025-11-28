@@ -1,5 +1,5 @@
 import User from "../models/User.js";
-import UserLog from "../models/UserLog.js";
+import UserLog from "../models/UserLog.js"; 
 import generateToken from "../utils/generateToken.js";
 
 // REGISTRO WEB
@@ -80,7 +80,7 @@ export const telegramAuth = async (req, res) => {
             user.lastLogin = new Date();
             if (avatar) user.avatar = avatar;
             if (password) user.password = password;
-
+            
             await user.save();
 
             // LOG
@@ -92,9 +92,9 @@ export const telegramAuth = async (req, res) => {
             });
 
             const token = generateToken(user);
-            return res.json({
-                user: { id: user._id, name: user.name, telegramId: user.telegramId, role: user.role, avatar: user.avatar },
-                token
+            return res.json({ 
+                user: { id: user._id, name: user.name, telegramId: user.telegramId, role: user.role, avatar: user.avatar }, 
+                token 
             });
         }
 
@@ -104,14 +104,14 @@ export const telegramAuth = async (req, res) => {
             if (emailExists) return res.status(400).json({ msg: "Email ya registrado." });
         }
 
-        const newUser = await User.create({
-            name: name || `tg_${telegramId}`,
-            telegramId,
-            telegramUsername,
-            email,
-            password,
+        const newUser = await User.create({ 
+            name: name || `tg_${telegramId}`, 
+            telegramId, 
+            telegramUsername, 
+            email,       
+            password,    
             avatar: avatar || "",
-            role: "user",
+            role: "user", 
             source: "telegram",
             lastLogin: new Date()
         });
@@ -125,9 +125,9 @@ export const telegramAuth = async (req, res) => {
         });
 
         const token = generateToken(newUser);
-        res.status(201).json({
-            user: { id: newUser._id, name: newUser.name, telegramId: newUser.telegramId, role: newUser.role, avatar: newUser.avatar },
-            token
+        res.status(201).json({ 
+            user: { id: newUser._id, name: newUser.name, telegramId: newUser.telegramId, role: newUser.role, avatar: newUser.avatar }, 
+            token 
         });
 
     } catch (err) {
