@@ -9,7 +9,7 @@ const generateToken = (user) => {
         email: user.email || null,
         telegramId: user.telegramId || null,
         source: user.source || "web"
-    }, process.env.JWT_SECRET, { expiresIn: "15m" });
+    }, process.env.JWT_SECRET, { expiresIn: "300s" });
 };
 
 export default generateToken;
