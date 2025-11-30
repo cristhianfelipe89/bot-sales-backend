@@ -26,7 +26,7 @@ import chatbotRoutes from "./src/routes/chatbot.routes.js";
 const app = express();
 
 app.use(helmet());
-app.use(cors({ origin: process.env.FRONTEND_URL || "http://localhost:5173", credentials: true }));
+app.use(cors({ origin: process.env.FRONTEND_URL , credentials: true }));//|| "http://localhost:5173"
 app.use(express.json());
 app.use(morgan("dev"));
 

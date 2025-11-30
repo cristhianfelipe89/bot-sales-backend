@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Aseo Hogar",
+        "description": "Productos de limpieza y mantenimiento del hogar."
+    },
+    {
+        "name": "Aseo Personal",
+        "description": "Productos de higiene personal."
+    },
+    {
+        "name": "Alimentos",
+        "description": "Productos comestibles empacados y frescos."
+    },
+    {
+        "name": "Bebidas",
+        "description": "Todo tipo de bebidas y refrescos."
+    },
+    {
+        "name": "Lácteos",
+        "description": "Leches, quesos y derivados."
+    },
+    {
+        "name": "Carnes y Pescados",
+        "description": "Proteínas frescas y congeladas."
+    },
+    {
+        "name": "Frutas y Verduras",
+        "description": "Productos frescos del campo."
+    },
+    {
+        "name": "Panadería",
+        "description": "Pan fresco, galletas y repostería."
+    },
+    {
+        "name": "Granos y Cereales",
+        "description": "Arroz, lentejas, avena y más."
+    },
+    {
+        "name": "Despensa",
+        "description": "Productos básicos del hogar."
+    },
+    {
+        "name": "Mascotas",
+        "description": "Alimentos y accesorios para mascotas."
+    },
+    {
+        "name": "Tecnología",
+        "description": "Celulares, accesorios y gadgets."
+    },
+    {
+        "name": "Electrodomésticos",
+        "description": "Línea blanca y electrodomésticos pequeños."
+    },
+    {
+        "name": "Ropa",
+        "description": "Prendas para hombre, mujer y niños."
+    },
+    {
+        "name": "Juguetería",
+        "description": "Juguetes para todas las edades."
+    },
+    {
+        "name": "Ferretería",
+        "description": "Herramientas y productos para construcción."
+    },
+    {
+        "name": "Papelería",
+        "description": "Útiles escolares y de oficina."
+    },
+    {
+        "name": "Hogar y Decoración",
+        "description": "Artículos y decoración para el hogar."
+    },
+    {
+        "name": "Cuidado del Bebé",
+        "description": "Productos para bebés y recién nacidos."
+    },
+    {
+        "name": "Salud y Bienestar",
+        "description": "Vitaminas y medicamentos OTC."
+    }
+]

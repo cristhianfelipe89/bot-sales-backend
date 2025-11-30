@@ -1,0 +1,562 @@
+[
+    {
+        "name": "Detergente Líquido Ariel 3L",
+        "description": "Detergente para ropa",
+        "category": "Aseo Hogar",
+        "price": 28000,
+        "stock": 100
+    },
+    {
+        "name": "Desinfectante Lysoform 1L",
+        "description": "Desinfectante multisuperficie",
+        "category": "Aseo Hogar",
+        "price": 12000,
+        "stock": 120
+    },
+    {
+        "name": "Lavaloza Axion 500ml",
+        "description": "Detergente líquido para loza",
+        "category": "Aseo Hogar",
+        "price": 6000,
+        "stock": 150
+    },
+    {
+        "name": "Ambientador Glade Manzana 360ml",
+        "description": "Ambientador en aerosol",
+        "category": "Aseo Hogar",
+        "price": 9000,
+        "stock": 80
+    },
+    {
+        "name": "Shampoo Head & Shoulders 400ml",
+        "description": "Shampoo anticaspa",
+        "category": "Aseo Personal",
+        "price": 18000,
+        "stock": 140
+    },
+    {
+        "name": "Crema Dental Colgate Total",
+        "description": "Crema dental protección completa",
+        "category": "Aseo Personal",
+        "price": 8500,
+        "stock": 200
+    },
+    {
+        "name": "Jabón Dove Original",
+        "description": "Jabón hidratante",
+        "category": "Aseo Personal",
+        "price": 4000,
+        "stock": 180
+    },
+    {
+        "name": "Desodorante Rexona Women",
+        "description": "Desodorante antitranspirante",
+        "category": "Aseo Personal",
+        "price": 12000,
+        "stock": 150
+    },
+    {
+        "name": "Galletas Saltín Noel",
+        "description": "Galletas saladas",
+        "category": "Alimentos",
+        "price": 11500,
+        "stock": 130
+    },
+    {
+        "name": "Fríjol Rojo 1kg",
+        "description": "Legumbre seca",
+        "category": "Alimentos",
+        "price": 7800,
+        "stock": 200
+    },
+    {
+        "name": "Aceite Premier 1L",
+        "description": "Aceite vegetal",
+        "category": "Alimentos",
+        "price": 10500,
+        "stock": 110
+    },
+    {
+        "name": "Atún Van Camp's Lata",
+        "description": "Atún en aceite",
+        "category": "Alimentos",
+        "price": 6900,
+        "stock": 170
+    },
+    {
+        "name": "Coca-Cola 1.5L",
+        "description": "Bebida gaseosa",
+        "category": "Bebidas",
+        "price": 4800,
+        "stock": 300
+    },
+    {
+        "name": "Agua Brisa 600ml",
+        "description": "Agua pura",
+        "category": "Bebidas",
+        "price": 2500,
+        "stock": 400
+    },
+    {
+        "name": "Jugo Hit Mango 1L",
+        "description": "Jugo de fruta",
+        "category": "Bebidas",
+        "price": 3800,
+        "stock": 250
+    },
+    {
+        "name": "Gatorade Naranja 500ml",
+        "description": "Bebida hidratante",
+        "category": "Bebidas",
+        "price": 4500,
+        "stock": 200
+    },
+    {
+        "name": "Leche Alquería 1L",
+        "description": "Leche entera larga vida",
+        "category": "Lácteos",
+        "price": 3800,
+        "stock": 300
+    },
+    {
+        "name": "Queso Campesino 500g",
+        "description": "Queso fresco",
+        "category": "Lácteos",
+        "price": 15000,
+        "stock": 120
+    },
+    {
+        "name": "Yogurt Alpina Fresa 1L",
+        "description": "Yogurt sabor fresa",
+        "category": "Lácteos",
+        "price": 7800,
+        "stock": 200
+    },
+    {
+        "name": "Mantequilla Alpina 250g",
+        "description": "Mantequilla con sal",
+        "category": "Lácteos",
+        "price": 9500,
+        "stock": 140
+    },
+    {
+        "name": "Pechuga de Pollo 1kg",
+        "description": "Pollo fresco",
+        "category": "Carnes y Pescados",
+        "price": 18000,
+        "stock": 80
+    },
+    {
+        "name": "Carne Molida 1kg",
+        "description": "Carne de res molida",
+        "category": "Carnes y Pescados",
+        "price": 23000,
+        "stock": 90
+    },
+    {
+        "name": "Tilapia Roja 1kg",
+        "description": "Filete de pescado",
+        "category": "Carnes y Pescados",
+        "price": 20000,
+        "stock": 70
+    },
+    {
+        "name": "Costillas de Cerdo 1kg",
+        "description": "Cerdo fresco",
+        "category": "Carnes y Pescados",
+        "price": 25000,
+        "stock": 60
+    },
+    {
+        "name": "Banano Criollo x Kg",
+        "description": "Fruta fresca",
+        "category": "Frutas y Verduras",
+        "price": 3200,
+        "stock": 200
+    },
+    {
+        "name": "Tomate Chonto x Kg",
+        "description": "Tomate fresco",
+        "category": "Frutas y Verduras",
+        "price": 4200,
+        "stock": 150
+    },
+    {
+        "name": "Cebolla Cabeza x Kg",
+        "description": "Cebolla seca",
+        "category": "Frutas y Verduras",
+        "price": 3800,
+        "stock": 180
+    },
+    {
+        "name": "Papa Pastusa x Kg",
+        "description": "Papa para cocinar",
+        "category": "Frutas y Verduras",
+        "price": 3500,
+        "stock": 160
+    },
+    {
+        "name": "Pan Bimbo Artesano",
+        "description": "Pan tajado tipo artesanal",
+        "category": "Panadería",
+        "price": 7500,
+        "stock": 140
+    },
+    {
+        "name": "Croissant Caja x6",
+        "description": "Pan croissant",
+        "category": "Panadería",
+        "price": 8500,
+        "stock": 100
+    },
+    {
+        "name": "Ponqué Ramo Gala",
+        "description": "Ponqué tradicional",
+        "category": "Panadería",
+        "price": 4800,
+        "stock": 120
+    },
+    {
+        "name": "Galletas Festival Chocolate",
+        "description": "Galletas rellenas",
+        "category": "Panadería",
+        "price": 3500,
+        "stock": 180
+    },
+    {
+        "name": "Arroz Diana 1kg",
+        "description": "Arroz blanco",
+        "category": "Granos y Cereales",
+        "price": 5800,
+        "stock": 300
+    },
+    {
+        "name": "Lentejas 500g",
+        "description": "Lenteja seca",
+        "category": "Granos y Cereales",
+        "price": 4200,
+        "stock": 200
+    },
+    {
+        "name": "Avena en Hojuelas 500g",
+        "description": "Avena natural",
+        "category": "Granos y Cereales",
+        "price": 3700,
+        "stock": 170
+    },
+    {
+        "name": "Garbanzo 500g",
+        "description": "Legumbre garbanzo",
+        "category": "Granos y Cereales",
+        "price": 5200,
+        "stock": 140
+    },
+    {
+        "name": "Aceite Gourmet 1L",
+        "description": "Aceite vegetal premium",
+        "category": "Despensa",
+        "price": 11000,
+        "stock": 90
+    },
+    {
+        "name": "Pasta La Muñeca 500g",
+        "description": "Pasta para cocinar",
+        "category": "Despensa",
+        "price": 3200,
+        "stock": 210
+    },
+    {
+        "name": "Sal Refisal 1kg",
+        "description": "Sal refinada",
+        "category": "Despensa",
+        "price": 2200,
+        "stock": 200
+    },
+    {
+        "name": "Azúcar Manuelita 1kg",
+        "description": "Azúcar refinada",
+        "category": "Despensa",
+        "price": 3900,
+        "stock": 180
+    },
+    {
+        "name": "Concentrado Dog Chow 1kg",
+        "description": "Alimento para perro",
+        "category": "Mascotas",
+        "price": 12500,
+        "stock": 160
+    },
+    {
+        "name": "Arena para Gatos 5kg",
+        "description": "Arena sanitaria",
+        "category": "Mascotas",
+        "price": 14000,
+        "stock": 100
+    },
+    {
+        "name": "Snacks Pedigree",
+        "description": "Golosinas para perro",
+        "category": "Mascotas",
+        "price": 6800,
+        "stock": 200
+    },
+    {
+        "name": "Collar Mascota Ajustable",
+        "description": "Accesorio para mascotas",
+        "category": "Mascotas",
+        "price": 8500,
+        "stock": 90
+    },
+    {
+        "name": "Auriculares Bluetooth JBL",
+        "description": "Audífonos inalámbricos",
+        "category": "Tecnología",
+        "price": 120000,
+        "stock": 50
+    },
+    {
+        "name": "Cargador Samsung Original",
+        "description": "Cargador tipo C",
+        "category": "Tecnología",
+        "price": 35000,
+        "stock": 100
+    },
+    {
+        "name": "Cable USB Tipo C 1m",
+        "description": "Cable de datos",
+        "category": "Tecnología",
+        "price": 12000,
+        "stock": 200
+    },
+    {
+        "name": "Parlante Bluetooth Sony",
+        "description": "Miniparlante portátil",
+        "category": "Tecnología",
+        "price": 180000,
+        "stock": 40
+    },
+    {
+        "name": "Aspiradora 1200W LG",
+        "description": "Aspiradora doméstica",
+        "category": "Electrodomésticos",
+        "price": 320000,
+        "stock": 30
+    },
+    {
+        "name": "Air Fryer Oster 4L",
+        "description": "Freidora de aire",
+        "category": "Electrodomésticos",
+        "price": 420000,
+        "stock": 50
+    },
+    {
+        "name": "Horno Microondas 23L",
+        "description": "Microondas digital",
+        "category": "Electrodomésticos",
+        "price": 350000,
+        "stock": 45
+    },
+    {
+        "name": "Ventilador de Torre",
+        "description": "Ventilador vertical",
+        "category": "Electrodomésticos",
+        "price": 180000,
+        "stock": 60
+    },
+    {
+        "name": "Camiseta Algodón Hombre",
+        "description": "Camiseta básica",
+        "category": "Ropa",
+        "price": 35000,
+        "stock": 120
+    },
+    {
+        "name": "Jeans Mujer Tiro Alto",
+        "description": "Jean para mujer",
+        "category": "Ropa",
+        "price": 90000,
+        "stock": 80
+    },
+    {
+        "name": "Tenis Deportivos Unisex",
+        "description": "Calzado deportivo",
+        "category": "Ropa",
+        "price": 120000,
+        "stock": 60
+    },
+    {
+        "name": "Chaqueta Impermeable",
+        "description": "Chaqueta resistente al agua",
+        "category": "Ropa",
+        "price": 150000,
+        "stock": 40
+    },
+    {
+        "name": "Carro Juguete Hot Wheels",
+        "description": "Carro metálico",
+        "category": "Juguetería",
+        "price": 18000,
+        "stock": 150
+    },
+    {
+        "name": "Muñeca Barbie Original",
+        "description": "Muñeca articulada",
+        "category": "Juguetería",
+        "price": 85000,
+        "stock": 70
+    },
+    {
+        "name": "Bloques Tipo Lego 500pz",
+        "description": "Bloques de construcción",
+        "category": "Juguetería",
+        "price": 120000,
+        "stock": 40
+    },
+    {
+        "name": "Pelota de Fútbol Adidas",
+        "description": "Pelota profesional",
+        "category": "Juguetería",
+        "price": 45000,
+        "stock": 110
+    },
+    {
+        "name": "Taladro Black+Decker",
+        "description": "Taladro eléctrico",
+        "category": "Ferretería",
+        "price": 220000,
+        "stock": 30
+    },
+    {
+        "name": "Juego de Brocas 20pcs",
+        "description": "Set de brocas",
+        "category": "Ferretería",
+        "price": 30000,
+        "stock": 90
+    },
+    {
+        "name": "Pintura Vinilo 1 Galón",
+        "description": "Pintura negra",
+        "category": "Ferretería",
+        "price": 45000,
+        "stock": 70
+    },
+    {
+        "name": "Caja de Herramientas 16\"",
+        "description": "Caja organizadora",
+        "category": "Ferretería",
+        "price": 28000,
+        "stock": 80
+    },
+    {
+        "name": "Cuaderno Argollado 5 Materias",
+        "description": "Cuaderno universitario",
+        "category": "Papelería",
+        "price": 12000,
+        "stock": 200
+    },
+    {
+        "name": "Bolígrafos Bic x10",
+        "description": "Bolis de colores",
+        "category": "Papelería",
+        "price": 8500,
+        "stock": 300
+    },
+    {
+        "name": "Resaltadores Faber Castell x4",
+        "description": "Pack de resaltadores",
+        "category": "Papelería",
+        "price": 15000,
+        "stock": 180
+    },
+    {
+        "name": "Corrector Líquido",
+        "description": "Corrector escolar",
+        "category": "Papelería",
+        "price": 3500,
+        "stock": 150
+    },
+    {
+        "name": "Cojín Decorativo 45x45",
+        "description": "Cojín con diseño",
+        "category": "Hogar y Decoración",
+        "price": 25000,
+        "stock": 90
+    },
+    {
+        "name": "Juego de Sábanas Doble",
+        "description": "Sábanas algodón",
+        "category": "Hogar y Decoración",
+        "price": 70000,
+        "stock": 60
+    },
+    {
+        "name": "Set de Velas Aromáticas",
+        "description": "Set de 3 velas",
+        "category": "Hogar y Decoración",
+        "price": 18000,
+        "stock": 120
+    },
+    {
+        "name": "Cuadro Floral Decorativo",
+        "description": "Decoración para pared",
+        "category": "Hogar y Decoración",
+        "price": 55000,
+        "stock": 40
+    },
+    {
+        "name": "Pañales Huggies Etapa 3",
+        "description": "Pañales desechables",
+        "category": "Cuidado del Bebé",
+        "price": 55000,
+        "stock": 90
+    },
+    {
+        "name": "Toallitas Húmedas Johnson x80",
+        "description": "Toallitas para bebé",
+        "category": "Cuidado del Bebé",
+        "price": 9500,
+        "stock": 200
+    },
+    {
+        "name": "Tetero Avent 260ml",
+        "description": "Tetero anticólicos",
+        "category": "Cuidado del Bebé",
+        "price": 28000,
+        "stock": 60
+    },
+    {
+        "name": "Crema Mustela Bebé",
+        "description": "Crema hidratante",
+        "category": "Cuidado del Bebé",
+        "price": 32000,
+        "stock": 70
+    },
+    {
+        "name": "Multivitamínico Centrum",
+        "description": "Vitaminas diarias",
+        "category": "Salud y Bienestar",
+        "price": 45000,
+        "stock": 100
+    },
+    {
+        "name": "Vitamina C Efervescente",
+        "description": "Vitamina C 1000mg",
+        "category": "Salud y Bienestar",
+        "price": 15000,
+        "stock": 180
+    },
+    {
+        "name": "Acetaminofén 500mg x20",
+        "description": "Medicamento OTC",
+        "category": "Salud y Bienestar",
+        "price": 5500,
+        "stock": 200
+    },
+    {
+        "name": "Gel Antibacterial 250ml",
+        "description": "Gel desinfectante",
+        "category": "Salud y Bienestar",
+        "price": 8000,
+        "stock": 150
+    }
+]
