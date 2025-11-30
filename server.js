@@ -9,7 +9,6 @@ import connectDB from "./src/config/db.js";
 
 dotenv.config();
 
-// 2. Configurar la Zona Horaria (Fallback a Bogotá si no está en el .env)
 process.env.TZ = process.env.TZ || 'America/Bogota';
 
 await connectDB();
@@ -26,11 +25,34 @@ import chatbotRoutes from "./src/routes/chatbot.routes.js";
 const app = express();
 
 app.use(helmet());
-app.use(cors({ origin: process.env.FRONTEND_URL , credentials: true }));//|| "http://localhost:5173"
+
+// 🟦  CORS PROFESIONAL — múltiples dominios desde el .env
+const allowedOrigins = process.env.FRONTEND_URLS
+    ? process.env.FRONTEND_URLS.split(",").map(origin => origin.trim())
+    : [];
+
+console.log("🌐 Allowed Origins:", allowedOrigins);
+
+app.use(
+    cors({
+        origin: (origin, callback) => {
+            // Permitir requests sin origen (Postman, cron, servidores)
+            if (!origin) return callback(null, true);
+
+            if (allowedOrigins.includes(origin)) {
+                return callback(null, true);
+            } else {
+                console.warn("❌ CORS bloqueado para origen:", origin);
+                return callback(new Error("Not allowed by CORS"), false);
+            }
+        },
+        credentials: true,
+    })
+);
+
 app.use(express.json());
 app.use(morgan("dev"));
 
-// mark source (web, telegram, n8n)
 app.use((req, res, next) => {
     req.requestSource = req.headers["x-request-source"] || req.body?.source || "web";
     next();
@@ -53,7 +75,7 @@ app.use("/api/chatbot", chatbotRoutes);
 app.get("/", (req, res) => res.json({ ok: true }));
 
 app.use((err, req, res, next) => {
-    console.error("Unhandled Error:", err);
+    console.error("🔥 Error no manejado:", err.message);
     res.status(500).json({ message: "Internal server error" });
 });
 
